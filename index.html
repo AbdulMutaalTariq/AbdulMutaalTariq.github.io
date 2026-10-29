@@ -204,6 +204,7 @@
       .project-card:nth-child(4) .proj-img { background-image: url("media/e-coomerce.png"); }
       .project-card:nth-child(5) .proj-img { background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80&fit=crop"); }
       .project-card:nth-child(6) .proj-img { background-image: url("media/summit.jpg"); }
+      .project-card:nth-child(7) .proj-img { background-image: url("media/synergy.png"); }
       .proj-img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.12) 100%); z-index: 1; }
       .proj-num { position: absolute; top: 28px; left: 28px; font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.4); z-index: 3; }
       .proj-tag { position: absolute; top: 28px; right: 28px; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.65); z-index: 3; backdrop-filter: blur(6px); background: rgba(0,0,0,0.2); }
@@ -941,10 +942,20 @@
                   <a href="https://summitestatebuilders.vercel.app" target="_blank" class="proj-link">View case study →</a>
                 </div>
               </div>
+              <div class="project-card">
+                <div class="proj-img"></div><div class="proj-img-overlay"></div>
+                <div class="proj-num">00-7</div><div class="proj-tag">Enterprise</div>
+                <div class="proj-content">
+                  <div class="proj-title">Synergy HR<br />Management</div>
+                  <div class="proj-desc">An enterprise multi-entity HRMS platform featuring UAE labour compliance, automated payroll with WPS SIF generation, granular RBAC, and ESS/MSS portals.</div>
+                  <div class="proj-includes"><span class="proj-pill">Next.js</span><span class="proj-pill">React</span><span class="proj-pill">ASP.NET Core</span><span class="proj-pill">REST API</span></div>
+                  <a href="https://hr-admin.digitaldive-dev.digital/dashboard/" target="_blank" class="proj-link">View case study →</a>
+                </div>
+              </div>
             </div>
             <div class="projects-progress">
               <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-              <div class="progress-label" id="progressLabel">01 / 06</div>
+              <div class="progress-label" id="progressLabel">01 / 07</div>
             </div>
           </div>
         </div>
@@ -1181,8 +1192,8 @@
         const progress = Math.max(0, Math.min(1, scrolled / maxShift));
         projectsTrack.style.transform = `translateX(-${progress * maxShift}px)`;
         progressFill.style.width = progress * 100 + "%";
-        const cardIdx = Math.min(6, Math.ceil(progress * 6) || 1);
-        progressLabel.textContent = `0${cardIdx} / 06`;
+        const cardIdx = Math.min(7, Math.ceil(progress * 7) || 1);
+        progressLabel.textContent = `0${cardIdx} / 07`;
       }
 
       // ── SCROLL REVEAL ──
